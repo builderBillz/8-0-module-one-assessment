@@ -28,7 +28,22 @@ const exampleMovies = require("./movies");
       "James and the Giant Peach",
     ];
  */
-function getAllMovieTitles() {}
+//initial value = []
+//initial return value = []
+// loop through the movies array
+// push in movies[i].title into the array I am returning
+function getAllMovieTitles(movies) {
+  
+  let movieTitles = []
+
+  for (let movie of movies) {
+    
+    movieTitles.push(movie.title)
+
+  }
+
+  return movieTitles
+}
 
 /**
  * getHighestMetascore()
@@ -41,6 +56,10 @@ function getAllMovieTitles() {}
  *  getHighestMetascore(movies);
  *  //> 96
  */
+// initial value 0
+// initial return value 0
+// loop through movies array
+//check if current score 
 function getHighestMetascore() {}
 
 /**
