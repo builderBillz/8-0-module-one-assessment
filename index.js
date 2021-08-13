@@ -215,13 +215,18 @@ function findById(movies, iD) {
  *  //> []
  */
 function filterByGenre(movies, genre) {
-  let foundMovie = {}
+  let foundMovie = []
 
 
   for (let movie of movies) {
-
-  }
-  
+    
+    let lowGenres = movie.genre.toLowerCase()
+    let lowGenre = genre.toLowerCase()
+    
+    if (lowGenres.includes(lowGenre)){
+      foundMovie.push(movie)
+    }
+  } 
   return foundMovie
 
 }
