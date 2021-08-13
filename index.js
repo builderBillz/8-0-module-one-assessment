@@ -59,8 +59,25 @@ function getAllMovieTitles(movies) {
 // initial value 0
 // initial return value 0
 // loop through movies array
-//check if current score 
-function getHighestMetascore() {}
+//check if current score as a Number is higher than the current value of highestscore
+// is so then replace highest score with that number value 
+function getHighestMetascore(movies) {
+    
+  let highestScore = 0
+
+  for (let movie of movies) {
+    
+    let numberScore = Number(movie.metascore)
+
+    if(numberScore > highestScore){
+
+      highestScore = numberScore
+
+    }
+  }
+
+  return highestScore
+}
 
 /**
  * getAverageIMDBRating()
