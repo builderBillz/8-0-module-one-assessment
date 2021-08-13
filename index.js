@@ -28,8 +28,8 @@ const exampleMovies = require("./movies");
       "James and the Giant Peach",
     ];
  */
-//initial value = []
-//initial return value = []
+//initial value is an empty array []
+// return value is an array
 // loop through the movies array
 // push in movies[i].title into the array I am returning
 function getAllMovieTitles(movies) {
@@ -57,7 +57,7 @@ function getAllMovieTitles(movies) {
  *  //> 96
  */
 // initial value 0
-// initial return value 0
+// return value is a number
 // loop through movies array
 //check if current score as a Number is higher than the current value of highestscore
 // is so then replace highest score with that number value 
@@ -91,7 +91,11 @@ function getHighestMetascore(movies) {
  *  //> 7.76
  */
 //initial value 0
-// initial return value 0
+// return value is a number
+// loop through the array
+// accumulate total numeric value of the idmb Ratings
+// divide that total by the length of the movies array
+// if movies array it is empty return 0
 function getAverageIMDBRating(movies) {
     
   let averageRating = 0
@@ -126,7 +130,35 @@ function getAverageIMDBRating(movies) {
  *  countByRating(movies);
  *  //> { G: 3, PG: 7 }
  */
-function countByRating() {}
+//initial value is empty object{}
+//return value is an object
+// loop through movies array
+// if ratingCount[ratings] has no value, give it a value of 0
+// if ratingCount[ratings] has a value of atleast 0 add 1 to that value and ratingCount[ratings] equals the new value
+
+function countByRating(movies) {
+
+let ratingCount = {}
+let gCount = 0
+let pgCount = 0
+for (let movie of movies) {
+ 
+  let ratings = movie.rated
+
+  if(!ratingCount[ratings]){
+
+   ratingCount[ratings] = 0
+  
+  } if(ratingCount[ratings] >= 0){
+   
+    ratingCount[ratings] += 1
+   
+  }
+}
+
+return ratingCount
+
+}
 
 /**
  * findById()
@@ -142,7 +174,11 @@ function countByRating() {}
       // Toy Story 4
     };
  */
-function findById() {}
+
+//initial 
+function findById(movies, iD) {
+
+}
 
 /**
  * filterByGenre()
