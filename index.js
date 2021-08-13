@@ -175,9 +175,23 @@ return ratingCount
     };
  */
 
-//initial 
+//initial value foundMovie is empty object 
 function findById(movies, iD) {
+  let foundMovie = null
 
+  if(!movies.length){
+
+    return null
+
+  }
+  for (let movie of movies) {
+    
+    if (movie.imdbID === iD){
+    foundMovie = movie
+    } 
+  }
+  
+  return foundMovie
 }
 
 /**
@@ -200,7 +214,17 @@ function findById(movies, iD) {
  *  filterByGenre(movies, "Horror")
  *  //> []
  */
-function filterByGenre() {}
+function filterByGenre(movies, genre) {
+  let foundMovie = {}
+
+
+  for (let movie of movies) {
+
+  }
+  
+  return foundMovie
+
+}
 
 /**
  * getAllMoviesReleasedAtOrBeforeYear()
